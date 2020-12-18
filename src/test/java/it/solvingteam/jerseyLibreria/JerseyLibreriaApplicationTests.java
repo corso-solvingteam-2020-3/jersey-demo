@@ -1,13 +1,13 @@
-package it.solvingteam.jerseydemo;
+package it.solvingteam.jerseyLibreria;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class JerseyDemoApplicationTests {
+class JerseyLibreriaApplicationTests {
 
-    @Test
-    void contextLoads() {
-    }
+	@Test
+	void contextLoads() {
+	}
 
 }

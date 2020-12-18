@@ -1,12 +1,13 @@
-package it.solvingteam.jerseydemo.configuration;
+package it.solvingteam.jerseyLibreria.configuration;
 
-import it.solvingteam.jerseydemo.controller.MathController;
-import it.solvingteam.jerseydemo.filter.CORSFilter;
 import javax.annotation.PostConstruct;
+
 import org.glassfish.jersey.server.ResourceConfig;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.context.annotation.Configuration;
+
+import it.solvingteam.jerseyLibreria.controller.LibreriaController;
 
 @Configuration
 public class JerseyConfig extends ResourceConfig {
@@ -16,8 +17,7 @@ public class JerseyConfig extends ResourceConfig {
     @PostConstruct
     public void registerJerseyController() {
         logger.info("Registration controller....");
-        register(CORSFilter.class);
-        register(MathController.class);
+        register(LibreriaController.class);
     }
 
 }
