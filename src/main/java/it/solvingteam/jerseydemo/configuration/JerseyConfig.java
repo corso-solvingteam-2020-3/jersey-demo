@@ -1,6 +1,7 @@
 package it.solvingteam.jerseydemo.configuration;
 
 import it.solvingteam.jerseydemo.controller.MathController;
+import it.solvingteam.jerseydemo.filter.CORSFilter;
 import javax.annotation.PostConstruct;
 import org.glassfish.jersey.server.ResourceConfig;
 import org.slf4j.Logger;
@@ -15,6 +16,7 @@ public class JerseyConfig extends ResourceConfig {
     @PostConstruct
     public void registerJerseyController() {
         logger.info("Registration controller....");
+        register(CORSFilter.class);
         register(MathController.class);
     }
 
